@@ -41,7 +41,7 @@ function App() {
       <h3>{loading ? "loading..." : message}</h3>
       <label>
         File Name
-        <input type="text" onChange={handleFileChange} />
+        <input type="text" onChange={handleFileChange} placeholder="defaults to system.log"/>
       </label>
       <label>
         Number of Lines
