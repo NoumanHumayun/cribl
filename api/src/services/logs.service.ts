@@ -4,7 +4,7 @@ import cp from "child_process";
 
 export const getLogs = (req: express.Request, res: express.Response) => {
     
-  const numOfLines = parseInt(req.query.limit as string) || 10;
+  const numOfLines = parseInt(req.query.limit as string) - 1 || 9;
   const filename = req.query.file || "system.log";
   const keyword = req.query.search || "";
   const pathToFile = `/var/log/${filename}`;
